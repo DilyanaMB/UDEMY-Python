@@ -9,6 +9,8 @@ if height > 120:
         ticket_price = 12
     elif age > 11:
         ticket_price = 7
+    elif 45 <= age <= 55:
+        ticket_price = 0
     else:
         ticket_price = 5
 
