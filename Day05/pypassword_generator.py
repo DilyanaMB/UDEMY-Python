@@ -26,5 +26,4 @@ password = ""
 for c in password_list:
     password += c
 
-print(password)
 print(f"Your password is: {password}")
