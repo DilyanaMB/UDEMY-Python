@@ -1,3 +1,6 @@
+from random import random
+
+word_list = ['aardvark','baboon','camel']
 print('''
  _                                             
 | |                                            
@@ -8,4 +11,6 @@ print('''
                     __/ |                      
                    |___/''')
 print("Word to guess: _______")
+chosen_word = random.choice(word_list)
+print(chosen_word)
 letter = input("Guess a letter: ")
