@@ -26,6 +26,9 @@ print("Word to guess: " + presented_word_str)
 lives = 6
 is_user_win = False
 
+def print_left_lives(lives):
+    print(f"****************************{lives}/6 LIVES LEFT****************************")
+
 while lives > 0 and not is_user_win:
     letter = input("Guess a letter: ").lower()
     if letter in guessed_letters:
@@ -49,19 +52,19 @@ while lives > 0 and not is_user_win:
                 print(hangman_lost_lives.hangman_minus_six)
             elif lives ==1:
                 print(hangman_lost_lives.hangman_minus_five)
-                print(f"****************************{lives}/6 LIVES LEFT****************************")
+                print_left_lives(lives)
             elif lives == 2:
                 print(hangman_lost_lives.hangman_minus_four)
-                print(f"****************************{lives}/6 LIVES LEFT****************************")
+                print_left_lives(lives)
             elif lives == 3:
                 print(hangman_lost_lives.hangman_minus_three)
-                print(f"****************************{lives}/6 LIVES LEFT****************************")
+                print_left_lives(lives)
             elif lives == 4:
                 print(hangman_lost_lives.hangman_minus_two)
-                print(f"****************************{lives}/6 LIVES LEFT****************************")
+                print_left_lives(lives)
             elif lives == 5:
                 print(hangman_lost_lives.hangman_minus_one)
-                print(f"****************************{lives}/6 LIVES LEFT****************************")
+                print_left_lives(lives)
     is_user_win =not any(x == "_" for x in presented_word)
 
 if is_user_win:
