@@ -1,1 +1,2 @@
-word_list = ['aardvark', 'baboon', 'camel']
+word_list = ['aardvark', 'baboon', 'camel','adorable','agreeable','beautiful','cheerful','crazy','delicious','clever',
+             'excellent','fantastic','marvelous','delightful','chuffed','knackered','dodgy','trolley','cheeky','pavement']
