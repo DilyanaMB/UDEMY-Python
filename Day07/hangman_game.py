@@ -29,6 +29,7 @@ is_user_win = False
 while lives > 0 and not is_user_win:
     letter = input("Guess a letter: ").lower()
     if letter in guessed_letters:
+        print("You already guessed that letter. Try.")
         continue
     else:
         if letter in chosen_word:
@@ -46,22 +47,21 @@ while lives > 0 and not is_user_win:
             print(f"You guessed {letter}, that's not in the word. You lose a life.")
             if lives == 0:
                 print(hangman_lost_lives.hangman_minus_six)
-                print(f"***********************IT WAS {chosen_word}! YOU LOSE**********************")
             elif lives ==1:
                 print(hangman_lost_lives.hangman_minus_five)
-                print(f"****************************{6-lives}/6 LIVES LEFT****************************")
+                print(f"****************************{lives}/6 LIVES LEFT****************************")
             elif lives == 2:
                 print(hangman_lost_lives.hangman_minus_four)
-                print(f"****************************{6 - lives}/6 LIVES LEFT****************************")
+                print(f"****************************{lives}/6 LIVES LEFT****************************")
             elif lives == 3:
                 print(hangman_lost_lives.hangman_minus_three)
-                print(f"****************************{6 - lives}/6 LIVES LEFT****************************")
+                print(f"****************************{lives}/6 LIVES LEFT****************************")
             elif lives == 4:
                 print(hangman_lost_lives.hangman_minus_two)
-                print(f"****************************{6 - lives}/6 LIVES LEFT****************************")
+                print(f"****************************{lives}/6 LIVES LEFT****************************")
             elif lives == 5:
                 print(hangman_lost_lives.hangman_minus_one)
-                print(f"****************************{6 - lives}/6 LIVES LEFT****************************")
+                print(f"****************************{lives}/6 LIVES LEFT****************************")
     is_user_win =not any(x == "_" for x in presented_word)
 
 if is_user_win:
