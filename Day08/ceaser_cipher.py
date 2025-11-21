@@ -15,6 +15,11 @@ def encode(msg, shift):
             shift2 =  abs(len(alphabet)- alphabet.index(i)-1)
             result += alphabet[shift2]
 
+    # solution 2:
+    # for letter in msg:
+    #     shifted_position %= len(alphabet) ---- 0-25
+    #     result += alphabet[shifted_position]
+
     print("Here's the encoded result: " + result)
 
 def decode(msg, shift):
