@@ -4,25 +4,26 @@ print(logo)
 
 
 def add_nums(a, b):
-    print(a + b)
+    print(f"{a} + {b} = {a + b}")
     return a + b
 
 
 def subtract_nums(a, b):
-    print(a - b)
+    print(f"{a} - {b} = {a - b}")
     return a - b
 
 
 def multiply_nums(a, b):
-    print(a * b)
+    print(f"{a} * {b} = {a * b}")
     return a * b
 
 
 def divide_nums(a, b):
     if b == 0:
         print(f"{a} / {b} = NaN")
-    print(a / b)
+    print(f"{a} / {b} = {a / b}")
     return a / b
+
 
 first_num = float(input("What's the first number?:"))
 result = first_num
@@ -40,6 +41,6 @@ while True:
         result = divide_nums(result, second_num)
 
     is_continue = input(f"Type 'y' to continue calculating with {result}, "
-                          f"or type 'n' to start a new calculation:").lower()
+                        f"or type 'n' to start a new calculation:").lower()
     if is_continue == "n":
         result = 0
