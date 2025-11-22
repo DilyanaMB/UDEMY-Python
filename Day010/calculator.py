@@ -2,7 +2,6 @@ from calculator_art import *
 
 print(logo)
 
-
 def add_nums(a, b):
     print(f"{a} + {b} = {a + b}")
     return a + b
@@ -24,11 +23,12 @@ def divide_nums(a, b):
     print(f"{a} / {b} = {a / b}")
     return a / b
 
-
-first_num = float(input("What's the first number?:"))
-result = first_num
+is_continue = 'n'
 
 while True:
+    if is_continue == "n":
+        first_num = float(input("What's the first number?:"))
+        result = first_num
     action = input("Pick an operation:\n+\n-\n*\n/\n")
     second_num = float(input("What's the next number?:"))
     if action == "+":
@@ -42,5 +42,4 @@ while True:
 
     is_continue = input(f"Type 'y' to continue calculating with {result}, "
                         f"or type 'n' to start a new calculation:").lower()
-    if is_continue == "n":
-        result = 0
+
