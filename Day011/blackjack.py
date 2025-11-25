@@ -1,11 +1,11 @@
 from blackjack_art import *
-from random import randint
-
+import random
+from cards import *
 print(logo)
 should_continue = True
 
 def get_card():
-    new_card = randint(1, 13)
+    new_card = random.choice(cards)
     return new_card
 
 def get_score(cards):
@@ -15,7 +15,7 @@ def get_score(cards):
     return score
 
 def get_comp_cards(score, cards):
-    while score < 13:
+    while score < 17:
         new_card = get_card()
         cards.append(new_card)
         score = get_score(cards)
