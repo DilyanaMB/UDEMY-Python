@@ -4,11 +4,12 @@ import random
 print(logo)
 
 def set_difficulty(diff):
+    lives_left =-1
     if diff == "easy":
-        lives = 10
+        lives_left = 10
     else:
-        lives = 5
-    return lives
+        lives_left = 5
+    return lives_left
 
 def check_if_number_guessed(u_guess, ch_number):
     if u_guess == ch_number:
