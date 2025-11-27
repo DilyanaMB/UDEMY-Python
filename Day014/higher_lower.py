@@ -2,23 +2,19 @@ from art import *
 from game_data import *
 import random
 
-user_score = 0
-
 def choose_random_player():
     return data[random.randint(0, len(data) - 1)]
 
 def choose_second_player(playerA):
-    new_player= data[random.randint(0, len(data) - 1)]
+    new_player = data[random.randint(0, len(data) - 1)]
     while new_player["name"] == playerA["name"]:
         new_player = data[random.randint(0, len(data) - 1)]
     return new_player
-
 
 def check_if_more_followers(a, b):
     if a["follower_count"] > b["follower_count"]:
         return True
     return False
-
 
 def game(score, player1):
     player2 = choose_second_player(player1)
@@ -40,7 +36,7 @@ def game(score, player1):
         print(f'Sorry, that\'s wrong. Final score: {score}')
         return False, player1, score
 
-
+user_score = 0
 is_user_right = True
 is_first_player = True
 
