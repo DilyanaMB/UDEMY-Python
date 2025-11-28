@@ -2,12 +2,14 @@ should_make_another_coffee = True
 LATTE_COST = 2.5
 ESPRESSO_COST = 1.5
 CAPPUCCINO_COST = 2.0
+
 resources = {
     'water': 300,
     'milk': 200,
     'coffee': 100,
     'money': 0
 }
+
 required_resources = [
     {
         'espresso': {'water': 50, 'coffee': 18, 'milk': 0},
