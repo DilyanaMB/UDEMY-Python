@@ -26,7 +26,7 @@ def move_down():
     timmy.color(choice(colours))
     timmy.back(randint(10, 50))
 
-for _ in range(50):
+for _ in range(200):
     direction = choice(directions)
     if direction == 'left':
         move_left()
