@@ -1,5 +1,5 @@
-from turtle import Turtle, Screen
-from random import randint, choice,random
+from turtle import Screen,Turtle
+from random import  choice
 
 screen = Screen()
 timmy = Turtle()
