@@ -10,8 +10,8 @@ screen.title("Pong Game")
 screen.tracer(0)
 ball = Ball()
 
-r_paddle = Paddle(350,0)
-l_paddle = Paddle(-350,0)
+r_paddle = Paddle(360,0)
+l_paddle = Paddle(-360,0)
 
 screen.listen()
 screen.onkey(r_paddle.go_up,'Up')
@@ -24,6 +24,8 @@ game_is_on = True
 while game_is_on:
     screen.update()
     time.sleep(0.1)
+    if ball.ycor() > 280 or ball.ycor() < -280:
+        ball.bounce()
     ball.move()
 
 screen.exitonclick()
