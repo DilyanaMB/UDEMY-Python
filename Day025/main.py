@@ -26,3 +26,15 @@ average =sum(temp_list) / float(len(temp_list))
 print(average)
 
 print(data['temp'].mean()) # do the same as sum()/len() but with pandas
+
+print(data['temp'].max())
+
+# print(data['condition'])
+print(data.condition) # pandas automatically collect into a series all columns,
+# e.g. if in the file there is column Emo then you can call data.Emo
+
+
+# Get data in row
+print(data[data.day == 'Monday'])
+
+print(data[data.temp==data.temp.max()])
