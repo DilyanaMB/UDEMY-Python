@@ -38,3 +38,25 @@ print(data.condition) # pandas automatically collect into a series all columns,
 print(data[data.day == 'Monday'])
 
 print(data[data.temp==data.temp.max()])
+
+# Extract particular value from row
+
+monday = data[data.day == 'Monday']
+
+print(monday.condition)
+
+monday_temp = monday.temp[0]
+monday_fahrenheit = monday_temp * 9/5 + 32
+print(monday_fahrenheit)
+
+# Create a dataFrame from scratch
+
+data_dict = {
+    'students': ['Emo', 'Victor', 'Deya'],
+    'scores': [90, 80, 70],
+}
+
+data_dict_from_scratch = pandas.DataFrame(data_dict)
+print(data_dict_from_scratch)
+
+data_dict_from_scratch.to_csv('students.csv')
