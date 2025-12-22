@@ -1,3 +1,5 @@
+import random
+
 list = [1, 2, 3]
 # new_list =[new_item for item in list]
 
@@ -24,3 +26,9 @@ short_names = [name for name in names if len(name) <= 4]
 
 names = ['Beth', 'Alex', 'Eleanor', 'Freddie', 'Dave', 'Caroline']
 upper_case_names = [name.upper() for name in names if len(name) > 5]
+
+scores = {student: random.randint(1, 100) for student in names}
+
+passed_students = {student:score for (student, score) in scores.items() if score >= 60}
+
+print(passed_students)
