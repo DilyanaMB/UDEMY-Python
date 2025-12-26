@@ -17,7 +17,7 @@ def button_clicked():
     input_text= save_input()
     my_label.config(text =input_text)
 
-# buttons
+# button
 button = Button( text="Click me", command=button_clicked)
 button.pack()
 
