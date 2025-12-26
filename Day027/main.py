@@ -14,13 +14,20 @@ my_label.pack()
 my_label['text'] = 'New text'
 
 def button_clicked():
-    my_label.config(text ='I\'ve got clicked')
+    input_text= save_input()
+    my_label.config(text =input_text)
 
 # buttons
 button = Button( text="Click me", command=button_clicked)
 button.pack()
 
 # entry
+input = Entry(width = 10)
+input.pack()
+
+# return the input in the field as String
+def save_input():
+    return input.get()
 
 # equal to while True: listen...
 window.mainloop()
