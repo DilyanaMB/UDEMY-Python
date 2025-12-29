@@ -25,3 +25,6 @@ else:
 finally:
     file.close()
     print('File was closed')
+
+    # will always be raised, regardless of there is an error or not
+    raise TypeError('This is the error I created')
