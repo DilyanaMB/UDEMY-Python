@@ -24,6 +24,7 @@ button.pack()
 # entry
 input = Entry(width = 10)
 input.pack()
+input.focus_set()
 
 # return the input in the field as String
 def save_input():
