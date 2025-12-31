@@ -32,7 +32,7 @@ new_button.grid(column=1, row=1)
 input = Entry(width=10)
 print(input.get())
 input.grid(column=3, row=2)
-
+input.focus_set()
 # NOTE! CAN'T mix grid and pack
 
 # equal to while True: listen...
