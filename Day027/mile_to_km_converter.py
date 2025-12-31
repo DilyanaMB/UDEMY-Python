@@ -7,6 +7,7 @@ window.config(padx=20, pady=20)
 
 input = Entry(width=7)
 input.grid(row=0, column=1)
+input.focus_set()
 
 label_miles = Label(text="Miles", font=("Arial", 24))
 label_miles.grid(row=0, column=2)
